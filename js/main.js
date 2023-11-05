@@ -1,4 +1,57 @@
 (() => {
+  gsap.registerPlugin(ScrollToPlugin);
+
+  gsap.to(".hero-logo", {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power3.out",
+    delay: 0.3,
+  });
+
+  gsap.to(".hero-title", {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power3.out",
+    delay: 0.5,
+  });
+  gsap.to(".hero-subtitle", {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power3.out",
+    delay: 0.7,
+  });
+  gsap.to(".button", {
+    duration: 1,
+    opacity: 1,
+    y: 0,
+    ease: "power3.out",
+    delay: 0.9,
+  });
+
+  document.querySelectorAll(".product").forEach(function (button) {
+    button.addEventListener("click", function () {
+      gsap.to(window, { duration: 1, scrollTo: ".ar-buds" });
+    });
+  });
+
+  document
+    .getElementById("exploreButton")
+    .addEventListener("click", function () {
+      gsap.to(window, { duration: 1, scrollTo: ".ar-buds" });
+    });
+
+  let menu = document.querySelector("#hammenu"),
+    mobileNav = document.querySelector(".mobile-menu");
+
+  function toggleMenu() {
+    mobileNav.classList.toggle("hidden");
+  }
+
+  menu.addEventListener("click", toggleMenu);
+
   //console.log("IIFE Fired");
   //variables
   const model = document.querySelector("#model");
@@ -65,5 +118,7 @@
   hotspots.forEach(function (hotspot) {
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
+
+    // GSAP
   });
 })();

@@ -1,9 +1,30 @@
 model-viewer {
-  width: 1800px;
-  height: 980px;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.promo {
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+span {
+  padding-left: 7px;
+  color: blue;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+model-viewer {
+  height: 60vh;
   background-color: #000000;
   margin: 0 auto;
   border-radius: 20px;
+
 }
 
 .Hotspot {
@@ -127,4 +148,18 @@ model-viewer[ar-status="session-started"]>#ar-prompt {
 
 model-viewer>#ar-prompt>img {
   animation: circle 4s linear infinite;
+}
+
+@media screen and (min-width: 730px) {
+
+  model-viewer {
+    height: 80vh;
+  }
+
+  .promo {
+    font-size: 1.4rem;
+  }
+
+
+
 }
