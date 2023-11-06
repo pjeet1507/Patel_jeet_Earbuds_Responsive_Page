@@ -7,6 +7,17 @@
     height: 500px;
 }
 
+.footer-working {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border: solid 0.5px wheat;
+    height: 200px;
+}
+
+
+
 .xray {
     display: none;
 }
@@ -14,6 +25,8 @@
 .xray-mobile {
     display: contents;
 }
+
+
 
 
 
