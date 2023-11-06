@@ -43,6 +43,34 @@
       gsap.to(window, { duration: 1, scrollTo: ".ar-buds" });
     });
 
+  // buy-now
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".content", {
+    scrollTrigger: {
+      trigger: ".buy-now-section",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+  });
+  // end
+
+  //  image moving
+  gsap.from(".image-container img", {
+    scrollTrigger: {
+      trigger: ".buy-now",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    x: 50,
+    duration: 1.5,
+  });
+
   let menu = document.querySelector("#hammenu"),
     mobileNav = document.querySelector(".mobile-menu");
 
@@ -52,8 +80,8 @@
 
   menu.addEventListener("click", toggleMenu);
 
-  //console.log("IIFE Fired");
-  //variables
+  // hotspots Selection
+
   const model = document.querySelector("#model");
   const hotspots = document.querySelectorAll(".Hotspot");
 
@@ -118,7 +146,15 @@
   hotspots.forEach(function (hotspot) {
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
+  });
 
-    // GSAP
+  //end-hotspots
+
+  //buy-scroll
+
+  document.querySelectorAll(".buy").forEach(function (button) {
+    button.addEventListener("click", function () {
+      gsap.to(window, { duration: 1, scrollTo: ".buynow" });
+    });
   });
 })();
