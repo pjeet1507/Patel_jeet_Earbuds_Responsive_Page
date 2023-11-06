@@ -167,6 +167,10 @@ model-viewer > #ar-prompt > img {
   display: none;
 }
 
+.menu-hid img {
+  width: 100px;
+}
+
 .nav-links {
   display: inline-flex;
 }
@@ -281,9 +285,8 @@ model-viewer > #ar-prompt > img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 91vh;
+  height: 100vh;
   background-color: #000000;
-  /* Green Background */
   color: white;
   text-align: center;
   overflow: hidden;
@@ -341,6 +344,46 @@ model-viewer > #ar-prompt > img {
     display: none;
   }
 }
+.buy-now {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 10%;
+}
+
+.buynow {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 30px;
+}
+
+.buynow-button {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buynow-button:hover {
+  background-color: #0056b3;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: #fff;
   text-decoration: none;
